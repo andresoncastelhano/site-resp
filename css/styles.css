@@ -1,0 +1,502 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/**********************************/
+/* 0. Variáveis
+/* 1. Container
+/* 2. Menu
+/* 3. Header
+/* 4. Quem somos
+/* 5. Nossos cursos
+/* 6. Planos
+/* 7. Vantagens
+/* 8. Newsletter
+/* 9. Footer
+/**********************************/
+
+/**********************************/
+/* 0. Variáveis
+/**********************************/
+:root {
+	--font-primary: "Nunito", Helvetica, Arial, Sans-serife;
+
+	--green-dark: #049a40;
+	--pink-dark: #e10bf9;
+	--green-litgth: #0bf96a;
+	--pink-ligth-dark: #f3a0fd;
+    --white: #f5f5f5;
+	}
+
+/**********************************/
+/* 1. Estilos gerais
+/**********************************/
+
+body {
+	background-color: var(--white);
+	font-family: var(--font-primary);
+}
+
+a,
+a:hover, /**Mouse sobre ele**/
+a:active, /** quando o link é clicado**/
+a:link, /** Link normal sem nunca ser visitado**/
+a:visited /** Link visitado **/ {
+	text-decoration: none;
+	color: black;
+}
+
+hr {
+	border: none;
+	background-color: var(--pink-dark);
+	height: 1.5px;
+	width: 140px;
+	margin: 50px auto;
+}
+
+p {
+	line-height: 30px;
+	padding: 0 20px;
+}
+
+.section-titulo {
+	text-align:  center;
+	font-size: 2.5rem;
+	font-weight: normal;	
+	margin-bottom: 40px;
+}
+
+img {
+	display: inline-block;
+	max-width: 100%;
+	
+}
+
+html { scroll-behavior: smooth;}
+	
+/**********************************/
+/* 2. Menu
+/**********************************/
+
+.menu-bg {
+		background-color: var(--green-litgth);
+		box-shadow: 1px 1px 25px 0px rgba(0, 0, 0, 0.288);
+		margin-bottom: 50px;
+		
+	}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: 960px;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.menu-logo {
+	margin:  10px;
+}
+
+/**********************************/
+/* 3. Header
+/**********************************/
+
+.nav-link {
+	display: flex;
+	flex-wrap: nowrap;	
+	padding: 20px 10px;
+}
+
+.introdução {
+	font-weight: bold;
+	font-size: 3em;
+	text-align: center;
+	margin: 0 auto;
+	
+
+}
+
+@media screen and (min-width: 300px) and (max-width:555px) {
+	.introdução  { 
+		padding-left: 10px 10px 0 10px;
+		
+		margin: 0 auto;
+		text-align: center;
+		justify-content: center;
+			
+	}
+}
+/**********************************/
+/* 4. Quem somos
+/**********************************/
+
+.somos {
+	max-width: 960px;
+	margin: 0 auto;	
+	
+}
+
+.somos-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	
+}
+
+.somos-container-texto {
+	flex-grow: 6;/*define a capacidade de um item flexível crescer, se necessário.*/
+	flex-shrink: 1; /* define a capacidade de um item flexível diminuir, pra caber no contaner.*/
+	flex-basis: 15rem; /*define o tamanho padrão de um elemento antes que o espaço restante seja distribuído*/
+
+}
+
+.somos-imagem {
+	flex-grow: 1;
+	flex-shrink: 1;
+	flex-basis: 20rem;
+}
+
+
+/**********************************/
+/* 5. Nossos cursos
+/**********************************/
+
+.cursos { 
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+.cursos-container{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.curso {
+	width: 280px;
+	margin: 0 20px;
+}
+
+.curso-titulo {
+	font-size: 1.5 rem;
+	font-weight: bolder;
+	text-align: center;
+	padding: 30px 0 20px 0;
+}
+
+.curso-descricao {
+	text-align: center;
+}
+/**********************************/
+/* 6. Planos
+/**********************************/
+
+.planos {
+	background-color: var(--pink-ligth-dark);
+	box-shadow: 1px 1px 20px 0px rgba(0, 0, 0, 0.218);
+	border-radius: 20px;
+	
+}
+
+.planos-container {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end;	
+}
+
+.plano {
+	width: 290px;
+	margin: 10px;
+	border: 2px solid var(--green-litgth);
+}
+
+.plano-titulo {
+	font-size: 3rem;
+	font-weight: bold;
+	text-align: center;
+	margin: 10px auto;
+}
+.plano-preço {
+	font-size: 3rem;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
+.plano-preço sub {
+	position: relative;
+	font-size: 1.5rem;
+	top: -20px;
+}
+
+.plano-divisor {
+	background-color: var(--green-litgth);
+	width: 20px;
+	margin:5px auto;
+}
+
+.plano-lista {
+max-width: 195px;
+margin: 0 auto;
+}
+
+.plano-lista-item {
+	margin: 10px 0;
+	font-style:italic ;
+	align-items: center;
+	display: flex;
+}
+
+.plano-lista-item::before {
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--green-litgth);
+	border-radius: 5px;
+	margin: 5px;
+}
+
+.plano-botão-comprar {
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin:15px	 auto;
+	padding: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--green-litgth);
+}
+
+.plano:last-child {
+	background-color: var(--green-litgth);
+}
+
+.plano-lista:last-child, .plano:last-child .plano-botão-comprar {
+	border: 2px var(--pink-dark);
+}
+
+.plano:last-child .plano-lista-item::before, .plano:last-child .plano-divisor {
+	background-color: var(--pink-dark);
+}
+
+@media (max-width: 800px) {
+	.plano:nth-child(3) {
+		order: -2;
+	}
+
+	.plano:nth-child(2) {
+		order: -1;
+	}
+}	
+
+/**********************************/
+/* 7. Vantagens
+/**********************************/
+
+.vantagens {
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+
+}	
+
+.vantagem-container {
+	max-width: 240px;
+	margin: 10px;
+}
+
+.vantagem-titulo {
+	font-size: 1.7rem;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.vantagem-titulo::before {
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	background-color: lawngreen;
+}
+
+.vantagem-container:nth-of-type(3n+1) .vantagem-titulo::before {
+	background-color: var(--green-litgth);
+}
+
+.vantagem-container:nth-of-type(3n+2) .vantagem-titulo::before {
+	background-color: var(--pink-dark);
+}
+
+.vantagem-container:nth-of-type(3n+3) .vantagem-titulo::before {
+	background-color: var(--green-dark);
+}
+
+@media (max-width: 800px) {
+	.vantagem-container {
+		max-width: 220px;
+	}
+}
+	
+	
+/**********************************/
+/* 8. Newsletter
+/**********************************/
+
+.newsletter {
+	background-color: var(--green-litgth);
+	box-shadow: 1px 10px 25px 0px rgba(0, 0, 0, 0.288);
+	border-radius: 20px 20px 0px 0px;
+	
+	
+}
+
+
+.newsletter-container {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;	
+}
+
+.newsletter-info {
+	flex: 1 1 220px;
+	padding-left: 10px;
+}
+
+.newsletter-info__titulo {
+	font-size: 2.62rem;
+	font-weight: bold;
+}
+
+@media screen and (min-width: 300px) and (max-width:555px) {
+	.newsletter-info__titulo, .newsletter-info__descricao { 
+		
+		margin: 0 auto;
+		text-align: center;
+		justify-content: center;
+			
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width:555px) {
+	.newsletter-info__descricao { 
+		
+		margin: 0 auto;
+		text-align: center;
+		justify-content: center;
+		
+	}
+}
+.newsletter-info__descricao {
+	font-style: italic;	
+	padding-bottom: 10px;
+}
+
+.newsletter-form {
+	flex: 2 1 220px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.newslatter-form__input{
+	flex: 3 1 220px;
+	font-size: 1.25rem;
+	text-align: center;
+	width: 325px;
+	color: black;
+	font-style: italic;
+	font-family: var(--font-primary);
+	border: 10px solid var(--pink-dark);
+	margin: 0px;
+	border-radius: 0px;
+}
+
+@media screen and (min-width: 300px) and (max-width:612px) {
+	.newsletter-form__submit, .newslatter-form__input{
+		
+	flex: 3 1 220px;
+	font-size: 1.25rem;
+	text-align: center;
+	width: 300px;
+	color: black;
+	font-style: italic;
+	font-family: var(--font-primary);
+	border: 10px solid var(--pink-dark);
+	margin: 0px;
+	border-radius: 0px;		
+	}
+}
+
+ 
+
+.newsletter-form__submit{
+	flex: 1 1 220px;
+	width: 192px;
+	font-family: var(--font-primary);
+	font-size: 2rem;
+	font-weight: bold;
+	text-transform: uppercase;
+	background-color: var(--pink-dark);
+	color: black;
+	border:none;
+	cursor: pointer;
+	padding: 15px;
+}
+
+
+
+
+/**********************************/
+/* 9. Footer
+/**********************************/
+
+.rodape { 
+	background-color: var(--pink-ligth-dark);
+	box-shadow: 1px 1px 15px 0px rgba(0, 0, 0, 0.288);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;	
+	padding: 35px calc((100% - 960px) / 2);
+}
+.rodape-descricao, .rodape-logo {
+	font-weight: 550;
+	padding-left: 10px;
+	padding-right: 10px;	
+}
+
+@media screen and (min-width: 300px) and (max-width:612px) {
+	.rodape-logo  { 
+		
+		margin: 0 auto;
+		text-align: center;
+		justify-content: center;		
+	}
+}
+
+@media screen and (min-width: 300px) and (max-width:612px) {
+	.rodape-descricao  { 
+		display: flex;
+		flex-direction: column;
+		margin: 0 auto;
+		justify-content: center;
+		text-align: center;
+		padding-bottom: 10px;
+		
+				
+	}
+}
+	
+	
+
+
